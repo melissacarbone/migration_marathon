@@ -11,8 +11,4 @@ books = [{title: 'The Grinch Who Stole Christmas', rating: 100, author: 'Dr. Seu
          {title: 'A Christmas Carol', rating: 90, author: 'Charles Dickens'},
          {title: 'Charlottes Web', rating: 75, author: 'E.B. White'}]
 
-books.each do |book|
-  unless Book.exists?(title: book[:title])
-    Book.create!(book)
-  end
-end
+Book.seed(books)
