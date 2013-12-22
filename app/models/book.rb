@@ -4,6 +4,7 @@ class Book < ActiveRecord::Base
   validates :rating, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 100 }
 
   has_many :checkouts
+  belongs_to :category
 
   def self.seed(books)
     books.each do |book|

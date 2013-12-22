@@ -11,4 +11,11 @@ books = [{title: 'The Grinch Who Stole Christmas', rating: 100, author: 'Dr. Seu
          {title: 'A Christmas Carol', rating: 90, author: 'Charles Dickens'},
          {title: 'Charlottes Web', rating: 75, author: 'E.B. White'}]
 
+categories = [{name: 'Humor'},
+              {name: 'Holiday'},
+              {name: 'Children'}]
+
 Book.seed(books)
+Category.seed(categories)
+
+
