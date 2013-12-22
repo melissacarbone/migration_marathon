@@ -8,6 +8,11 @@
 
 books = [{title: 'The Grinch Who Stole Christmas', rating: 100, author: 'Dr. Seuss'},
          {title: 'Green Eggs and Ham', rating: 80, author: 'Dr. Seuss'},
-         {title: 'A Christmas Carol', rating: 90, author: 'Charles Dickens'} ]
+         {title: 'A Christmas Carol', rating: 90, author: 'Charles Dickens'},
+         {title: 'Charlottes Web', rating: 75, author: 'E.B. White'}]
 
-Book.create(books)
+books.each do |book|
+  unless Book.exists?(title: book[:title])
+    Book.create!(book)
+  end
+end
